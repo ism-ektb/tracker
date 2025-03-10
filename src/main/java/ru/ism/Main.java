@@ -35,6 +35,7 @@ public class Main {
             do {
                 System.out.println("Вы зарегистрированы? нет-1 / да-иной символ");
                 if (scanner.next().equals("1")) {
+                    System.out.println("Введите данные для регистрации");
                     System.out.println("введите email");
                     email = scanner.next();
                     System.out.println("введите имя");
@@ -43,6 +44,7 @@ public class Main {
                     password = scanner.next();
                     user = userService.addUser(email, name, password);
                 } else {
+                    System.out.println("Введите данные для входа в систему");
                     System.out.println("введите email");
                     email = scanner.next();
                     System.out.println("введите пароль");

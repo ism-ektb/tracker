@@ -65,6 +65,7 @@ public class TransactionalServiceImpl implements TransactionService{
             return;
         }
         removeTransaction(userId, id);
+        transaction.setUserId(userId);
         repository.updateTransaction(id, transaction);
         int balance = userService.getBalance(userId);
         int delta = transaction.getOperation() == Operation.CREDIT ? 1 : -1;

@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserRepositoryImplTest {
     private final UserRepository repository = new UserRepositoryImpl();
 
-
     @Test
     void getUser() {
         Optional<User> user = repository.getUser(1);
